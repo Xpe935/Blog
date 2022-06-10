@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/marker?useUnicode=true&useSSL=false&characterEncoding=utf8
+    type: com.alibaba.druid.pool.DruidDataSource
+
+mybatis-plus:
+#  mapper-locations: classpath*:/mapper/**.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl
+  type-aliases-package: classpath*:/com/icarus/entity
+icarus:
+  jwt:
+    secret: iwqjhda8232bjgh432[cicada-smile]
+    # token有效时长
+    expire: 3600
+    # header 名称
+    header: token
